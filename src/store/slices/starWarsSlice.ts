@@ -26,10 +26,12 @@ export const starWarsSlice = createSlice({
       state,
       action: PayloadAction<AxiosResponse<IStarWarsData>>
     ) {
-      state.starWarsData.results = [
-        ...state.starWarsData.results,
-        ...action.payload.data.results,
-      ];
+      // state.starWarsData.results = [
+      //   ...state.starWarsData.results,
+      //   ...action.payload.data.results,
+      // ];
+
+      state.starWarsData.results.push(...action.payload.data.results);
       state.starWarsData.count = action.payload.data.count;
       state.starWarsData.next = action.payload.data.next;
       state.isLoading = false;
