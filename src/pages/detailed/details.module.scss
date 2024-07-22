@@ -1,0 +1,19 @@
+@import "../../styles/variables.scss";
+
+.detail {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 20px;
+  width: 100%;
+  box-shadow: $box-shadow;
+  margin-bottom: 15px;
+}
+
+.title {
+  margin-bottom: 15px;
+}
+
+.close {
+  font-size: 30px;
+}

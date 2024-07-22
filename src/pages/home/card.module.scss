@@ -1,0 +1,38 @@
+@import "../../styles/variables.scss";
+
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card__wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 20px;
+  width: 100%;
+  box-shadow: $box-shadow;
+  margin-bottom: 15px;
+}
+
+.card {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 20px;
+  box-shadow: $box-shadow;
+  margin-bottom: 10px;
+  width: 200px;
+  height: 150px;
+  align-items: center;
+  align-content: stretch;
+  flex-direction: column;
+
+  &:hover {
+    cursor: pointer;
+  }
+  width: 200px;
+  height: 150px;
+}
