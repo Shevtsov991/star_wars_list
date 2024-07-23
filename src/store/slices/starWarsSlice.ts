@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { AxiosResponse } from "axios";
-import { IInitialState, IPeople, IStarWarsData } from "../../types/templates";
+import { IInitialState, IStarWarsData } from "../../types/templates";
 
 const initialState: IInitialState = {
   starWarsData: {
@@ -26,12 +26,10 @@ export const starWarsSlice = createSlice({
       state,
       action: PayloadAction<AxiosResponse<IStarWarsData>>
     ) {
-      // state.starWarsData.results = [
-      //   ...state.starWarsData.results,
-      //   ...action.payload.data.results,
-      // ];
+      for (let item of action.payload.data.results) {
+        state.starWarsData.results.push(item);
+      }
 
-      state.starWarsData.results.push(...action.payload.data.results);
       state.starWarsData.count = action.payload.data.count;
       state.starWarsData.next = action.payload.data.next;
       state.isLoading = false;

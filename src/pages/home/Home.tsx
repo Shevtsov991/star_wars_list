@@ -7,16 +7,13 @@ import s from "./card.module.scss";
 import Pagination from "./Pagination";
 import { PaginationProvider } from "../../providers/paginationProviders";
 import { UseCastomPagination } from "../../hooks/usePagination";
+import { Link } from "react-router-dom";
 
 export default function Home() {
   const paginationNum = UseCastomPagination();
-  const dispatch = useCastomDispatch();
+
   const { starWarsData } = useCastomSelector(starWarsDataSelector);
-  useEffect(() => {
-    for (let index = 1; index < 10; index++) {
-      dispatch(fetchStarWars(index));
-    }
-  }, []);
+
   let start: number = 0;
   let end: number = 50;
   switch (paginationNum.num) {
@@ -40,7 +37,11 @@ export default function Home() {
     <div className={s.home}>
       <div className={s.card__wrapper}>
         {starWarsData.results.slice(start, end).map((el) => {
-          return <Card el={el} key={el.name} />;
+          return (
+            <Link to={`/detail/${el.name}`} key={el.name}>
+              <Card el={el} />
+            </Link>
+          );
         })}
       </div>
       <Pagination num={count} />

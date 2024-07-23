@@ -25,7 +25,7 @@
   box-shadow: $box-shadow;
   margin-bottom: 10px;
   width: 200px;
-  height: 150px;
+  height: 200px;
   align-items: center;
   align-content: stretch;
   flex-direction: column;
@@ -33,6 +33,4 @@
   &:hover {
     cursor: pointer;
   }
-  width: 200px;
-  height: 150px;
 }
