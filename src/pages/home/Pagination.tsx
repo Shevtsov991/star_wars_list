@@ -4,7 +4,6 @@ import Stack from "@mui/material/Stack";
 import { indigo } from "@mui/material/colors";
 import { UseCastomPagination } from "../../hooks/usePagination";
 
-let count: number;
 interface props {
   num: number;
 }

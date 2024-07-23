@@ -1,7 +1,6 @@
 import React from "react";
 import { IPeople } from "../../types/templates";
 import s from "./card.module.scss";
-import { Link } from "react-router-dom";
 interface props {
   el: IPeople;
 }

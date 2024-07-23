@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import logo from "./logo.svg";
 import Home from "./pages/home/Home";
 import { PaginationProvider } from "./providers/paginationProviders";
 import { Route, Routes } from "react-router";

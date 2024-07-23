@@ -1,11 +1,9 @@
-import React, { useEffect } from "react";
-import { useCastomDispatch, useCastomSelector } from "../../hooks/store";
-import { fetchStarWars } from "../../store/thunks/fetchStarWars";
+import React from "react";
+import { useCastomSelector } from "../../hooks/store";
 import { starWarsDataSelector } from "../../store/selectors";
 import Card from "./Card";
 import s from "./card.module.scss";
 import Pagination from "./Pagination";
-import { PaginationProvider } from "../../providers/paginationProviders";
 import { UseCastomPagination } from "../../hooks/usePagination";
 import { Link } from "react-router-dom";
 
